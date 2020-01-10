@@ -231,7 +231,7 @@ def getGitVersion() {
             args 'describe', '--tags', '--always', '--dirty'
             standardOutput = os
         }
-        outputAsString = os.toString().substring(1).trim()
+        outputAsString = os.toString().trim()
     }
     return outputAsString
 }
