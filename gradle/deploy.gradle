@@ -78,7 +78,6 @@ configure(subprojects - project(':util')) {
                 |
                 | The project version does not match the git tag.
                 |""".stripMargin()
-                throw new IllegalStateException(cause)
             }
             println("Publishing: ${project.name} : $gitVersion")
         }
