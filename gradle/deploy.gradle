@@ -22,6 +22,10 @@
 configure(subprojects - project(':util')) {
     apply plugin: 'com.bmuschko.nexus'
 
+    nexus {
+        sign = false
+    }
+
     modifyPom {
         project {
 
