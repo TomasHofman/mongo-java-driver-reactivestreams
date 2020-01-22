@@ -212,7 +212,7 @@ configure(subprojects.findAll { it.name != 'util' && it.name != 'mongo-java-driv
 task docs(type: Javadoc) {
     destinationDir = new File(projectDir, 'build/docs')
     options { options -> setJavaDocOptions(options) }
-    subprojects.grep({ it.name == 'driver' }).each { proj ->
+    subprojects.grep({ it.name == 'mongodb-driver-reactivestreams' }).each { proj ->
         proj.tasks.withType(Javadoc).each { javadocTask ->
             source += javadocTask.source
             classpath += javadocTask.classpath
